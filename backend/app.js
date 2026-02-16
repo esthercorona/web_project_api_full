@@ -11,11 +11,12 @@ const { validateSignup, validateSignin } = require("./middlewares/validation");
 const usersRouter = require("./routes/users");
 const cardsRouter = require("./routes/cards");
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3000, MONGODB_URI = "mongodb://localhost:27017/aroundb" } =
+  process.env;
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/aroundb");
+mongoose.connect(MONGODB_URI);
 
 app.use(cors());
 app.use(express.json());
