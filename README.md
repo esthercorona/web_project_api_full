@@ -71,6 +71,11 @@ JWT_SECRET=tu-clave-secreta-aqui
 - Sistema de "me gusta" en tarjetas
 - Protección de rutas con autenticación
 
+## Dominios
+
+- Frontend: https://laudable-spontaneity-production.up.railway.app
+- Backend: https://webprojectapifull-production-a945.up.railway.app
+
 ## Autor
 
 Esther Corona
