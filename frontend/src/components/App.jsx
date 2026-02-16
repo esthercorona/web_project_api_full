@@ -29,7 +29,7 @@ function App() {
         .checkToken(token)
         .then((res) => {
           setIsLoggedIn(true);
-          setUserEmail(res.data.email);
+          setUserEmail(res.email);
           navigate("/");
         })
         .catch((error) => {
@@ -49,7 +49,7 @@ function App() {
         .catch((error) => console.error(error));
 
       api
-        .getCardList()
+        .getInitialCards()
         .then((data) => {
           setCards(data);
         })
@@ -109,7 +109,7 @@ function App() {
 
   const handleUpdateUser = (data) => {
     api
-      .setUserInfo(data)
+      .editProfile(data.name, data.about)
       .then((newData) => {
         setCurrentUser(newData);
         handleClosePopup();
@@ -119,7 +119,7 @@ function App() {
 
   const handleUpdateAvatar = (data) => {
     api
-      .setUserAvatar(data)
+      .editAvatar(data.avatar)
       .then((newData) => {
         setCurrentUser(newData);
         handleClosePopup();
@@ -156,7 +156,7 @@ function App() {
 
   const handleAddPlaceSubmit = (data) => {
     api
-      .addCard(data)
+      .addCard(data.name, data.link)
       .then((newCard) => {
         setCards([newCard, ...cards]);
         handleClosePopup();

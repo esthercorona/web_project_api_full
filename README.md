@@ -47,16 +47,6 @@ npm run dev
 
 La aplicación corre en `http://localhost:5173`
 
-## Variables de entorno
-
-Crear archivo `.env` en la carpeta `backend/` con:
-
-```
-NODE_ENV=production
-JWT_SECRET=tu-clave-secreta-aqui
 ```
 
-## Dominio del proyecto
-
-Dominio del backend: (agregar cuando esté desplegado)
-Dominio del frontend: (agregar cuando esté desplegado)
+```
