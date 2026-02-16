@@ -13,11 +13,12 @@ Este proyecto conecta el frontend (React) con el backend (Node.js/Express) para 
 
 - Node.js
 - Express
-- MongoDB
+- MongoDB con Mongoose
 - JWT (autenticación)
 - bcryptjs (encriptación de contraseñas)
 - celebrate/Joi (validación)
 - winston (logging)
+- cors
 
 ### Frontend
 
@@ -25,7 +26,12 @@ Este proyecto conecta el frontend (React) con el backend (Node.js/Express) para 
 - React Router
 - Vite
 
-## Instalación y ejecución
+## Instalación y ejecución local
+
+### Requisitos previos
+
+- Node.js (v14 o superior)
+- MongoDB instalado y corriendo
 
 ### Backend
 
@@ -47,6 +53,24 @@ npm run dev
 
 La aplicación corre en `http://localhost:5173`
 
-```
+## Variables de entorno
+
+Crear archivo `.env` en la carpeta `backend/` con:
 
 ```
+NODE_ENV=production
+JWT_SECRET=tu-clave-secreta-aqui
+```
+
+## Funcionalidades
+
+- Registro de usuarios con email y contraseña
+- Inicio de sesión con autenticación JWT
+- Creación, edición y eliminación de tarjetas
+- Edición de perfil de usuario
+- Sistema de "me gusta" en tarjetas
+- Protección de rutas con autenticación
+
+## Autor
+
+Esther Corona
