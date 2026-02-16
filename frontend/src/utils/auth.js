@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://webprojectapifull-production-a945.up.railway.app";
 
 export const register = (email, password) => {
   return fetch(`${BASE_URL}/signup`, {

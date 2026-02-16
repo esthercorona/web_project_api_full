@@ -78,7 +78,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "http://localhost:3000",
+  baseUrl: "https://webprojectapifull-production-a945.up.railway.app",
 });
 
 export default api;
